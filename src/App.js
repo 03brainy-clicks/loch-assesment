@@ -7,20 +7,15 @@ import Eye from "./assets/Eye.svg";
 import Clock from "./assets/clock.svg";
 import Square from "./assets/square.svg";
 import Triangle from "./assets/triangle-down.svg";
-import Dropdown from "./components/Dropdown";
 import { useState } from "react";
-import InfiniteCarousel from "./components/Crousel";
 
 const App = () => {
-  const [dollar, setDollar] = useState("");
-  const [days, setDays] = useState("");
-
   return (
     <div className="w-screen h-screen flex bg-black overflow-hidden">
-      <main className="gradient w-3/5 h-full flex items-center">
+      <main className="gradient w-[calc(100%-44.44%)] py-10 h-full  overflow-y-scroll">
         <div className="w-full">
           {/* section-1 */}
-          <section className="flex gap-9 pt-16 pl-16 pr-0">
+          <section className="flex gap-9  pl-[3.75rem] pr-0">
             <div className="text-[#F2F2F2] w-[45%] flex flex-col gap-4">
               <div>
                 <img src={Bell} alt="bell" className="w-8 h-8" />
@@ -119,7 +114,7 @@ const App = () => {
             </div>
           </section>
           {/* section-2  */}
-          <section className="flex px-16  pt-[4.5rem] gap-8 ">
+          <section className="flex px-[3.75rem] pt-[4.5rem] gap-8 ">
             <div className="image">
               <img
                 src={
@@ -143,66 +138,93 @@ const App = () => {
             </div>
           </section>
           {/* section-3 */}
-          <section className="mt-[1.375rem] px-16">
+          <section className="mt-[1.375rem] px-[3.75rem]">
             <p className="text-[#f2f2f2] text-right text-2xl font-medium">
               Testimonials
             </p>
             <div className="h-[1px] bg-gray-50 mt-5 opacity-50"></div>
           </section>
           {/* section-4  */}
-          <section className="pl-16 pb-16 pt-10 flex gap-10 items-end">
-            <div className="mt-auto">
-              <img src={Square} alt="square" />
+          <section className="mt-10 pl-[3.75rem] flex gap-10 items-end">
+            <div className="shrink-0">
+              <img src={Square} alt="" />
             </div>
             {/* testimonials  */}
-            <div className=" w-full flex">
-              <InfiniteCarousel>
-                {/* testimonial-1  */}
-                <div className="p-5 w-[22rem] flex flex-col gap-5 bg-white rounded-xl testimonials">
-                  <h4 className="flex items-center font-semibold gap-2">
-                    Jack F{" "}
-                    <span className="text-gray-400 font-medium text-[.813rem]">
-                      Ex Blackrock PM
-                    </span>
-                  </h4>
-                  <p className="text-[#1D2129] font-medium">
-                    “Love how Loch integrates portfolio analytics and whale
-                    watching into one unified app.”
-                  </p>
-                </div>
-                {/* testimonial-2  */}
-                <div className="p-5 w-[22rem] flex flex-col gap-5 bg-white rounded-xl testimonials">
-                  <h4 className="flex items-center font-semibold gap-2">
-                    Yash P{" "}
-                    <span className="text-gray-400 font-medium text-[.813rem]">
-                      Research, 3poch Crypto Hedge Fund{" "}
-                    </span>
-                  </h4>
-                  <p className="text-[#1D2129] font-medium">
-                    “I use Loch everyday now. I don't think I could analyze
-                    crypto whale trends markets without it. I'm addicted!”
-                  </p>
-                </div>
-                {/* testimonial-3  */}
-                <div className="p-5 w-[33.125rem] flex flex-col gap-5 bg-white rounded-xl testimonials">
-                  <h4 className="flex items-center font-semibold gap-2">
-                    Shiv S
-                    <span className="text-gray-400 font-medium text-[.813rem]">
-                      Co-Founder Magik Labs
-                    </span>
-                  </h4>
-                  <p className="text-[#1D2129] font-medium">
-                    “Managing my own portfolio is helpful and well designed.
-                    What’s really interesting is watching the whales though. No
-                    one else has made whale tracking so simple.”
-                  </p>
-                </div>
-              </InfiniteCarousel>
+            <div className="w-full flex gap-5 overflow-hidden overflow-x-scroll rounded-l-xl ">
+              {/* Testimonial-1  */}
+              <div className="p-5 w-[22rem] shrink-0 flex flex-col gap-5 bg-white rounded-xl testimonials">
+                <h4 className="flex items-center font-semibold gap-2">
+                  Jack F{" "}
+                  <span className="text-gray-400 font-medium text-[.813rem]">
+                    Ex Blackrock PM
+                  </span>
+                </h4>
+                <p className="text-[#1D2129] font-medium">
+                  “Love how Loch integrates portfolio analytics and whale
+                  watching into one unified app.”
+                </p>
+              </div>
+              {/* testimonial-2  */}
+              <div className="p-5 w-[22rem] shrink-0 flex flex-col gap-5 bg-white rounded-xl testimonials">
+                <h4 className="flex items-center font-semibold gap-2">
+                  Yash P{" "}
+                  <span className="text-gray-400 font-medium text-[.813rem]">
+                    Research, 3poch Crypto Hedge Fund{" "}
+                  </span>
+                </h4>
+                <p className="text-[#1D2129] font-medium">
+                  “I use Loch everyday now. I don't think I could analyze crypto
+                  whale trends markets without it. I'm addicted!”
+                </p>
+              </div>
+              {/* testimonial-3  */}
+              <div className="p-5 w-[33.125rem] shrink-0 flex flex-col gap-5 mr-5 bg-white rounded-xl testimonials">
+                <h4 className="flex items-center font-semibold gap-2">
+                  Shiv S
+                  <span className="text-gray-400 font-medium text-[.813rem]">
+                    Co-Founder Magik Labs
+                  </span>
+                </h4>
+                <p className="text-[#1D2129] font-medium">
+                  “Managing my own portfolio is helpful and well designed.
+                  What’s really interesting is watching the whales though. No
+                  one else has made whale tracking so simple.”
+                </p>
+              </div>
             </div>
           </section>
         </div>
       </main>
-      <main className="w-2/5 h-full bg-white"></main>
+      <main className="w-[44.44%] h-full bg-white flex items-center justify-center">
+        <div className="w-full">
+          <div className="w-[21.25rem] mx-auto">
+            <h1 className="text-[#B0B1B3] text-[2.5rem] font-medium leading-tight">
+              Sign up for exclusive access.
+            </h1>
+            <div className="mt-8">
+              <form action="" className="space-y-6">
+                <div>
+                  <input
+                    type="text"
+                    className="py-5 outline-none px-6 font-medium w-full rounded-lg border border-gray-100 text-gray-900 placeholder:text-[#CACBCC]"
+                    placeholder="Your email address"
+                  />
+                </div>
+                <div>
+                  <button className="py-[1.125rem] px-7 w-full rounded-lg bg-gray-900 text-white text-center font-semibold">
+                    Get Started
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div className="mt-6">
+            <button className="py-[1.125rem]  w-full rounded-lg text-center text-gray-900 font-semibold">
+              You’ll receive an email with an invite link to join.
+            </button>
+          </div>
+        </div>
+      </main>
     </div>
   );
 };
