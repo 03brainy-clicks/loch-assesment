@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+
 const SignupForm = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState(false);
+
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+/;
 
   const isValidEmail = (email) => {
@@ -20,7 +22,7 @@ const SignupForm = () => {
   };
 
   return (
-    <main className="xl:w-[44.44%] md:min-h-screen p-7 md:p-0 w-full bg-white flex items-center justify-center">
+    <main className="xl:w-[44.44%] min-h-screen order-0 xl:order-1 p-7 py-16 md:p-0 w-full bg-white flex items-center justify-center">
       <div className="w-full">
         <div className="w-[21.25rem] mx-auto">
           <h1 className="text-[#B0B1B3] text-[2.5rem] font-medium leading-tight">

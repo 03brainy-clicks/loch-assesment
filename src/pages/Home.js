@@ -18,10 +18,9 @@ const Home = () => {
   return (
     <div className="w-screen md:h-screen flex xl:flex-row flex-col  bg-black xl:overflow-hidden ">
       <main
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className="gradient bg-black  xl:w-[calc(100%-44.44%)] 2xl:flex 2xl:items-center
+
+        className=" order-1  gradient xl:w-[calc(100%-44.44%)] 2xl:flex bg-black 2xl:items-center
+
        w-full sm:py-10 py-7 lg:h-screen min-h-screen  overflow-y-scroll  overflow-x-hidden"
       >
         <div className="w-full">
