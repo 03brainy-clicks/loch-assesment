@@ -12,7 +12,7 @@ import SignupForm from "./components/SignupForm";
 const App = () => {
   return (
     <div className="w-screen h-screen flex bg-black overflow-hidden ">
-      <main className="gradient w-[calc(100%-44.44%)] py-10 h-screen overflow-y-scroll ">
+      <main className="gradient w-[calc(100%-44.44%)] py-10 h-screen overflow-y-scroll overflow-x-hidden">
         <div className="w-full">
           {/* section-1 */}
           <section className="flex gap-9  pl-[3.75rem] pr-0">
@@ -29,7 +29,7 @@ const App = () => {
               </p>
             </div>
             <div className="w-[55%]">
-              <div className="w-full ml-14 pr-1 flex gap-4 overflow-x-auto rounded-l-lg shadow-inner card-container">
+              <div className="w-full pl-14 pr-1 flex gap-4 overflow-x-auto rounded-l-lg">
                 {/* card-1  */}
                 <div className="w-48 h-42 bg-white shrink-0 p-4 flex flex-col gap-4 card-1">
                   <div className="flex justify-between">
@@ -80,7 +80,7 @@ const App = () => {
                   </div>
                 </div>
                 {/* card-3  */}
-                <div className="w-48 h-42 bg-white shrink-0 rounded-lg p-4 flex flex-col gap-2 card">
+                <div className="w-48 h-42 mr-5 bg-white shrink-0 rounded-lg p-4 flex flex-col gap-2 card">
                   <div className="flex justify-between">
                     <img src={Clock} alt="bell" className="w-7 h-7" />
                     <div>
