@@ -17,33 +17,33 @@ import { motion } from "framer-motion";
 const Home = () => {
   return (
     <div className="w-screen md:h-screen flex xl:flex-row flex-col  bg-black xl:overflow-hidden ">
-      <motion.main
+      <main
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="gradient bg-black order-1  md:order-0  xl:w-[calc(100%-44.44%)] 2xl:flex 2xl:items-center
+        className="gradient bg-black  xl:w-[calc(100%-44.44%)] 2xl:flex 2xl:items-center
        w-full sm:py-10 py-7 lg:h-screen min-h-screen  overflow-y-scroll  overflow-x-hidden"
       >
         <div className="w-full">
           {/* section-1 */}
           <section className="flex lg:flex-row flex-col  lg:gap-15  gap-9  sm:pl-[3.75rem] pl-7 lg:pr-0 ">
             <div className="text-[#F2F2F2] lg:w-[46%] flex flex-col gap-4 lg:pr-0 sm:pr-[3.75rem] pr-5">
-              <motion.div
+              <div
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
               >
                 <img src={Bell} alt="bell" className="w-8 h-8" />
-              </motion.div>
-              <motion.h2
+              </div>
+              <h2
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.3 }}
                 className="text-[1.938rem] font-medium text-shadow-notification leading-9 "
               >
                 Get notified when a highly correlated whale makes a move
-              </motion.h2>
-              <motion.p
+              </h2>
+              <p
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.6 }}
@@ -51,14 +51,13 @@ const Home = () => {
               >
                 Find out when a certain whale moves more than any preset amount
                 on-chain or when a dormant whale you care about becomes active.
-              </motion.p>
+              </p>
             </div>
             <div className="lg:w-[54%] w-full ">
-              <div className="w-full h-full absolute top-0 left-0">
-              </div>
+              <div className="w-full h-full absolute top-0 left-0"></div>
               <div className="lg:w-full lg:pl-14 flex justify-start gap-4 overflow-x-auto rounded-l-lg">
                 {/* card-1  */}
-                <motion.div
+                <div
                   initial={{ opacity: 0, x: 100 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1, delay: 0.0 }}
@@ -82,9 +81,9 @@ const Home = () => {
                       </div>
                     </form>
                   </div>
-                </motion.div>
+                </div>
                 {/* card-2  */}
-                <motion.div
+                <div
                   initial={{ opacity: 0, x: 100 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1, delay: 0.3 }}
@@ -115,9 +114,9 @@ const Home = () => {
                       </span>
                     </div>
                   </div>
-                </motion.div>
+                </div>
                 {/* card-3  */}
-                <motion.div
+                <div
                   initial={{ opacity: 0, x: 100 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1, delay: 0.6 }}
@@ -151,13 +150,13 @@ const Home = () => {
                       becomes active{" "}
                     </p>
                   </div>
-                </motion.div>
+                </div>
               </div>
             </div>
           </section>
           {/* section-2  */}
           <section className="flex md:flex-row flex-col sm:px-[3.75rem] px-7 md:pt-[4.5rem] pt-9 gap-8 ">
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.9 }}
@@ -170,24 +169,24 @@ const Home = () => {
                 alt="cohorts"
                 className="md:w-[21rem] md:h-[19.125rem] rounded-xl"
               />
-            </motion.div>
+            </div>
             <div className="text-[#F2F2F2] md:w-[45%] flex flex-col gap-4 text-right ml-auto">
-              <motion.div
+              <div
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.9 }}
               >
                 <img src={Eye} alt="eye" className="w-8 h-8 ml-auto" />
-              </motion.div>
-              <motion.h2
+              </div>
+              <h2
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1.2 }}
                 className="text-3xl font-medium "
               >
                 Watch what the whales are doing{" "}
-              </motion.h2>
-              <motion.p
+              </h2>
+              <p
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1.5 }}
@@ -195,40 +194,40 @@ const Home = () => {
               >
                 All whales are not equal. Know exactly what the whales impacting
                 YOUR portfolio are doing.
-              </motion.p>
+              </p>
             </div>
           </section>
           {/* section-3 */}
           <section className="mt-[1.375rem] sm:px-[3.75rem] px-7">
-            <motion.p
+            <p
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 1.8 }}
               className="text-[#f2f2f2] text-right text-2xl font-medium"
             >
               Testimonials
-            </motion.p>
-            <motion.div
+            </p>
+            <div
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 0.5, y: 0 }}
               transition={{ duration: 1, delay: 2.1 }}
               className="h-[1px] bg-gray-50 mt-5 opacity-50"
-            ></motion.div>
+            ></div>
           </section>
           {/* section-4  */}
           <section className="mt-10 sm:pl-[3.75rem] pl-7 flex md:flex-row flex-col gap-10 md:items-end">
-            <motion.div
+            <div
               initial={{ opacity: 0, scale: 0.0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 2.4 }}
               className="shrink-0 "
             >
               <img src={Square} alt="" />
-            </motion.div>
+            </div>
             {/* testimonials  */}
             <Slider>
               {/* Testimonial-1  */}
-              <motion.div
+              <div
                 initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, delay: 2.4 }}
@@ -244,9 +243,9 @@ const Home = () => {
                   “Love how Loch integrates portfolio analytics and whale
                   watching into one unified app.”
                 </p>
-              </motion.div>
+              </div>
               {/* testimonial-2  */}
-              <motion.div
+              <div
                 initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, delay: 2.7 }}
@@ -262,9 +261,9 @@ const Home = () => {
                   “I use Loch everyday now. I don't think I could analyze crypto
                   whale trends markets without it. I'm addicted!”
                 </p>
-              </motion.div>
+              </div>
               {/* testimonial-3  */}
-              <motion.div
+              <div
                 initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, delay: 3.0 }}
@@ -281,11 +280,11 @@ const Home = () => {
                   What’s really interesting is watching the whales though. No
                   one else has made whale tracking so simple.”
                 </p>
-              </motion.div>
+              </div>
             </Slider>
           </section>
         </div>
-      </motion.main>
+      </main>
       <SignupForm />
     </div>
   );

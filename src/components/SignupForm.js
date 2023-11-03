@@ -1,10 +1,7 @@
-import { motion } from "framer-motion";
 import React, { useState } from "react";
-
 const SignupForm = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState(false);
-
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+/;
 
   const isValidEmail = (email) => {
@@ -18,34 +15,20 @@ const SignupForm = () => {
       console.log("Form submitted with email: ", email);
       window.location.href = "https://app.loch.one/welcome";
     } else {
-      setError(true);
+      setError((prev) => !prev);
     }
   };
 
-  const animateElement = (delay) => ({
-    initial: { opacity: 0, y: 100 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 1, delay },
-  });
-
   return (
-    <motion.main
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="xl:w-[44.44%] min-h-screen p-7 lg:order-2  py-16 md:p-0 w-full bg-white flex items-center justify-center"
-    >
+    <main className="xl:w-[44.44%] md:min-h-screen p-7 md:p-0 w-full bg-white flex items-center justify-center">
       <div className="w-full">
         <div className="w-[21.25rem] mx-auto">
-          <motion.h1
-            {...animateElement(0)}
-            className="text-[#B0B1B3] text-[2.5rem] font-medium leading-tight"
-          >
+          <h1 className="text-[#B0B1B3] text-[2.5rem] font-medium leading-tight">
             Sign up for exclusive access.
-          </motion.h1>
+          </h1>
           <div className="mt-8">
             <form className="space-y-6">
-              <motion.div {...animateElement(0.3)}>
+              <div>
                 <input
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -58,8 +41,8 @@ const SignupForm = () => {
                     Please enter a valid email.
                   </p>
                 )}
-              </motion.div>
-              <motion.div {...animateElement(0.6)}>
+              </div>
+              <div>
                 <button
                   type="submit"
                   onClick={handleSubmit}
@@ -67,20 +50,17 @@ const SignupForm = () => {
                 >
                   Get Started
                 </button>{" "}
-              </motion.div>
+              </div>
             </form>
           </div>
         </div>
         <div className="mt-6">
-          <motion.div
-            {...animateElement(0.9)}
-            className="py-[1.125rem]  w-full rounded-lg text-center text-[#19191A] font-semibold"
-          >
+          <div className="py-[1.125rem]  w-full rounded-lg text-center text-[#19191A] font-semibold ">
             You’ll receive an email with an invite link to join.
-          </motion.div>
+          </div>
         </div>
       </div>
-    </motion.main>
+    </main>
   );
 };
 
