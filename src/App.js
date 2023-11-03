@@ -11,8 +11,8 @@ import SignupForm from "./components/SignupForm";
 
 const App = () => {
   return (
-    <div className="w-screen h-screen flex bg-black overflow-hidden ">
-      <main className="gradient w-[calc(100%-44.44%)] py-10 h-screen overflow-y-scroll overflow-x-hidden">
+    <div className="w-screen h-screen flex xl:flex-row flex-col bg-black xl:overflow-hidden ">
+      <main className="gradient xl:w-[calc(100%-44.44%)] w-full py-10 min-h-screen xl:overflow-y-scroll overflow-x-hidden">
         <div className="w-full">
           {/* section-1 */}
           <section className="flex gap-9  pl-[3.75rem] pr-0">

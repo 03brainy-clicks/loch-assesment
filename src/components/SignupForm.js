@@ -11,7 +11,7 @@ const SignupForm = () => {
   };
 
   return (
-    <main className="w-[44.44%] h-full bg-white flex items-center justify-center">
+    <main className="xl:w-[44.44%] min-h-screen  w-full bg-white flex items-center justify-center">
       <div className="w-full">
         <div className="w-[21.25rem] mx-auto">
           <h1 className="text-[#B0B1B3] text-[2.5rem] font-medium leading-tight">

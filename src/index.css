@@ -50,3 +50,21 @@ body {
 box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.04), 0px 4px 10px 0px rgba(0, 0, 0, 0.04);
 
 }
+
+@keyframes marqueeAnimation {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee {
+  white-space: nowrap;
+  animation: marqueeAnimation 10s linear infinite;
+}
+
+.paused {
+  animation-play-state: paused;
+}
