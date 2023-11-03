@@ -6,8 +6,7 @@ const SignupForm = () => {
   const [error, setError] = useState(false);
   const navigate = useNavigate();
 
-  //   for error checking it checks email address containing @,. or not
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+/;
 
   const isValidEmail = (email) => {
     return emailRegex.test(email);
