@@ -53,9 +53,8 @@ const Home = () => {
                 on-chain or when a dormant whale you care about becomes active.
               </motion.p>
             </div>
-            <div className="lg:w-[54%] w-full border">
+            <div className="lg:w-[54%] w-full ">
               <div className="w-full h-full absolute top-0 left-0">
-
               </div>
               <div className="lg:w-full lg:pl-14 flex justify-start gap-4 overflow-x-auto rounded-l-lg">
                 {/* card-1  */}
