@@ -8,11 +8,12 @@ import Clock from "./assets/clock.svg";
 import Square from "./assets/square.svg";
 import Triangle from "./assets/triangle-down.svg";
 import { useState } from "react";
+import SignupForm from "./components/SignupForm";
 
 const App = () => {
   return (
-    <div className="w-screen h-screen flex bg-black overflow-hidden">
-      <main className="gradient w-[calc(100%-44.44%)] py-10 h-full  overflow-y-scroll">
+    <div className="w-screen h-screen flex bg-black ">
+      <main className="gradient w-[calc(100%-44.44%)] py-10 h-full  ">
         <div className="w-full">
           {/* section-1 */}
           <section className="flex gap-9  pl-[3.75rem] pr-0">
@@ -195,36 +196,7 @@ const App = () => {
           </section>
         </div>
       </main>
-      <main className="w-[44.44%] h-full bg-white flex items-center justify-center">
-        <div className="w-full">
-          <div className="w-[21.25rem] mx-auto">
-            <h1 className="text-[#B0B1B3] text-[2.5rem] font-medium leading-tight">
-              Sign up for exclusive access.
-            </h1>
-            <div className="mt-8">
-              <form action="" className="space-y-6">
-                <div>
-                  <input
-                    type="text"
-                    className="py-5 outline-none px-6 font-medium w-full rounded-lg border border-gray-100 text-gray-900 placeholder:text-[#CACBCC]"
-                    placeholder="Your email address"
-                  />
-                </div>
-                <div>
-                  <button className="py-[1.125rem] px-7 w-full rounded-lg bg-gray-900 text-white text-center font-semibold">
-                    Get Started
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div className="mt-6">
-            <button className="py-[1.125rem]  w-full rounded-lg text-center text-gray-900 font-semibold">
-              You’ll receive an email with an invite link to join.
-            </button>
-          </div>
-        </div>
-      </main>
+      <SignupForm />
     </div>
   );
 };
