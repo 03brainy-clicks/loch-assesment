@@ -1,61 +1,47 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useState } from "react";
 
 function Testimonials({ children }) {
   const containerRef = useRef(null);
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [containerWidth, setContainerWidth] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
-  const stepSize = containerWidth / (children.length * 2); // Multiply the length by 2
+  const [isDown, setIsDown] = useState(false);
+  const [startX, setStartX] = useState(null);
+  const [scrollLeft, setScrollLeft] = useState(null);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (!isHovered) {
-        // Only scroll if not hovered
-        const nextScrollPosition = scrollPosition + stepSize;
-        if (containerRef.current) {
-          containerRef.current.scrollTo({
-            left: nextScrollPosition >= containerWidth ? 0 : nextScrollPosition,
-            behavior: "smooth",
-          });
-          setScrollPosition(
-            nextScrollPosition >= containerWidth ? 0 : nextScrollPosition
-          );
-        }
-      }
-    }, 2000); // Auto-scroll interval: 2 seconds
-
-    return () => clearInterval(interval); // Clear the interval on component unmount
-  }, [scrollPosition, containerWidth, isHovered, children.length, stepSize]);
-
-  useEffect(() => {
-    if (containerRef.current) {
-      setContainerWidth(containerRef.current.scrollWidth);
-    }
-  }, []);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
+  const handleMouseDown = (e) => {
+    setIsDown(true);
+    setStartX(e.pageX - containerRef.current.offsetLeft);
+    setScrollLeft(containerRef.current.scrollLeft);
   };
 
   const handleMouseLeave = () => {
-    setIsHovered(false);
+    setIsDown(false);
+  };
+
+  const handleMouseUp = () => {
+    setIsDown(false);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - containerRef.current.offsetLeft;
+    const walk = (x - startX) * 1; // Adjust the multiplier to control scroll speed
+    containerRef.current.scrollLeft = scrollLeft - walk;
   };
 
   return (
     <div
       className="w-full flex gap-5 overflow-hidden rounded-l-xl"
-      onMouseEnter={handleMouseEnter}
+      onMouseDown={handleMouseDown}
       onMouseLeave={handleMouseLeave}
+      onMouseUp={handleMouseUp}
+      onMouseMove={handleMouseMove}
+      ref={containerRef}
+      style={{ overflowX: "auto" }}
     >
-      <div
-        className="flex gap-5"
-        style={{ overflowX: "scroll" }}
-        ref={containerRef}
-      >
-        <div style={{ display: "flex" }}>
-          {children}
-          {children} {/* Duplicate the children to create the seamless loop */}
-        </div>
+      <div style={{ display: "flex" }}>
+        {React.Children.map(children, (child, index) => (
+          <div key={index}>{child}</div>
+        ))}
       </div>
     </div>
   );

@@ -15,16 +15,19 @@ import Slider from "../components/Slider";
 
 const Home = () => {
   return (
-    <div className="w-screen sm:h-screen flex xl:flex-row flex-col bg-black xl:overflow-hidden ">
-      <main className="gradient xl:w-[calc(100%-44.44%)] w-full sm:py-10 py-7 min-h-screen xl:overflow-y-scroll overflow-x-hidden">
+    <div className="w-screen md:h-screen flex xl:flex-row flex-col  bg-black xl:overflow-hidden ">
+      <main
+        className="gradient xl:w-[calc(100%-44.44%)] 2xl:flex 2xl:items-center
+       w-full sm:py-10 py-7 lg:h-screen min-h-screen  overflow-y-scroll  overflow-x-hidden"
+      >
         <div className="w-full">
           {/* section-1 */}
-          <section className="flex lg:flex-row flex-col  gap-9  sm:pl-[3.75rem] pl-7 lg:pr-0 ">
-            <div className="text-[#F2F2F2] lg:w-[45%] flex flex-col gap-4 lg:pr-0 sm:pr-[3.75rem] pr-5">
+          <section className="flex lg:flex-row flex-col  lg:gap-15  gap-9  sm:pl-[3.75rem] pl-7 lg:pr-0 ">
+            <div className="text-[#F2F2F2] lg:w-[46%] flex flex-col gap-4 lg:pr-0 sm:pr-[3.75rem] pr-5">
               <div>
                 <img src={Bell} alt="bell" className="w-8 h-8" />
               </div>
-              <h2 className="text-3xl font-medium text-shadow ">
+              <h2 className="text-[1.938rem] font-medium text-shadow-notification leading-9 ">
                 Get notified when a highly correlated whale makes a move
               </h2>
               <p className="opacity-70 font-medium">
@@ -32,10 +35,10 @@ const Home = () => {
                 on-chain or when a dormant whale you care about becomes active.
               </p>
             </div>
-            <div className="lg:w-[55%] w-full">
-              <div className="lg:w-full lg:pl-14 flex justify-start gap-4 overflow-x-auto rounded-l-lg">
+            <div className="lg:w-[54%] w-full">
+              <div className="lg:w-full lg:pl-14 flex justify-start gap-4 overflow-x-auto rounded-l-lg cards-container">
                 {/* card-1  */}
-                <div className="w-48 h-42 bg-white shrink-0 p-4 flex flex-col gap-4 card-1">
+                <div className="w-48  bg-white shrink-0 p-4 flex flex-col gap-4 card-1">
                   <div className="flex justify-between">
                     <img src={Bell2} alt="bell" className="w-7 h-7" />
                     <p className="text-[.569rem] font-semibold">Save</p>
@@ -56,7 +59,7 @@ const Home = () => {
                   </div>
                 </div>
                 {/* card-2  */}
-                <div className="w-48 h-42 bg-white shrink-0 p-4 flex flex-col  card">
+                <div className="w-48 bg-white shrink-0 p-4 flex flex-col  card">
                   <div className="flex justify-between">
                     <img src={Chart} alt="bell" className="w-7 h-7" />
                     <div>
@@ -84,7 +87,7 @@ const Home = () => {
                   </div>
                 </div>
                 {/* card-3  */}
-                <div className="w-48 h-42 lg:mr-5 bg-white shrink-0 rounded-lg p-4 flex flex-col gap-2 card">
+                <div className="w-48 lg:mr-4 bg-white shrink-0 rounded-lg p-4 flex flex-col gap-2 card">
                   <div className="flex justify-between">
                     <img src={Clock} alt="bell" className="w-7 h-7" />
                     <div>
@@ -154,9 +157,6 @@ const Home = () => {
               <img src={Square} alt="" />
             </div>
             {/* testimonials  */}
-            {/* <div className="w-full flex gap-5 overflow-hidden overflow-x-scroll rounded-l-xl ">
-             
-            </div> */}
             <Slider>
               {/* Testimonial-1  */}
               <div className="p-5 mr-5 w-[22rem] shrink-0 flex flex-col gap-5 bg-white rounded-xl testimonials">

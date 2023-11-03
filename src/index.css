@@ -20,7 +20,8 @@ body {
 }
 
 .card-container {
-  box-shadow: inset 0 0 200px #0505056f;
+  box-shadow: 0px 0.7px 0.7px 0px rgba(0, 0, 0, 0.04),
+    0px 2.8px 7px 0px rgba(0, 0, 0, 0.04);
 }
 
 .card-1 {
@@ -41,30 +42,13 @@ body {
   background: #fff;
 }
 
-.text-shadow {
+.text-shadow-notification {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.testimonials {
-  /* ShadowDropdown */
-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.04), 0px 4px 10px 0px rgba(0, 0, 0, 0.04);
+.input-shadow {
+  border: 1px solid var(--grey-100, #e5e5e6);
 
-}
-
-@keyframes marqueeAnimation {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-.marquee {
-  white-space: nowrap;
-  animation: marqueeAnimation 10s linear infinite;
-}
-
-.paused {
-  animation-play-state: paused;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.04),
+    0px 4px 10px 0px rgba(0, 0, 0, 0.04);
 }
