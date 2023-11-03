@@ -11,12 +11,12 @@ import SignupForm from "./components/SignupForm";
 
 const App = () => {
   return (
-    <div className="w-screen h-screen flex xl:flex-row flex-col bg-black xl:overflow-hidden ">
-      <main className="gradient xl:w-[calc(100%-44.44%)] w-full py-10 min-h-screen xl:overflow-y-scroll overflow-x-hidden">
+    <div className="w-screen sm:h-screen flex xl:flex-row flex-col bg-black xl:overflow-hidden ">
+      <main className="gradient xl:w-[calc(100%-44.44%)] w-full sm:py-10 py-5 min-h-screen xl:overflow-y-scroll overflow-x-hidden">
         <div className="w-full">
           {/* section-1 */}
-          <section className="flex gap-9  pl-[3.75rem] pr-0">
-            <div className="text-[#F2F2F2] w-[45%] flex flex-col gap-4">
+          <section className="flex lg:flex-row flex-col  gap-9  sm:pl-[3.75rem] pl-5 lg:pr-0 ">
+            <div className="text-[#F2F2F2] lg:w-[45%] flex flex-col gap-4 lg:pr-0 sm:pr-[3.75rem] pr-5">
               <div>
                 <img src={Bell} alt="bell" className="w-8 h-8" />
               </div>
@@ -28,8 +28,8 @@ const App = () => {
                 on-chain or when a dormant whale you care about becomes active.
               </p>
             </div>
-            <div className="w-[55%]">
-              <div className="w-full pl-14 pr-1 flex gap-4 overflow-x-auto rounded-l-lg">
+            <div className="lg:w-[55%] w-full">
+              <div className="lg:w-full lg:pl-14 flex justify-start gap-4 overflow-x-auto rounded-l-lg">
                 {/* card-1  */}
                 <div className="w-48 h-42 bg-white shrink-0 p-4 flex flex-col gap-4 card-1">
                   <div className="flex justify-between">
@@ -80,7 +80,7 @@ const App = () => {
                   </div>
                 </div>
                 {/* card-3  */}
-                <div className="w-48 h-42 mr-5 bg-white shrink-0 rounded-lg p-4 flex flex-col gap-2 card">
+                <div className="w-48 h-42 lg:mr-5 bg-white shrink-0 rounded-lg p-4 flex flex-col gap-2 card">
                   <div className="flex justify-between">
                     <img src={Clock} alt="bell" className="w-7 h-7" />
                     <div>
@@ -114,17 +114,17 @@ const App = () => {
             </div>
           </section>
           {/* section-2  */}
-          <section className="flex px-[3.75rem] pt-[4.5rem] gap-8 ">
+          <section className="flex md:flex-row flex-col sm:px-[3.75rem] px-5 pt-[4.5rem] gap-8 ">
             <div className="image">
               <img
                 src={
                   "https://s3-alpha-sig.figma.com/img/a837/e66b/317b128c03dcf7840ae72269ac076405?Expires=1699833600&Signature=p18wd3dXPhaNTgmqrqTiEE8C4ccmhSoCqTxJRMOArT8RDqncCTH70MgOPy8xJKwhsrLtZkBBEApVEpy8axSlYqBh4SIrsSulSd0ih-jNr2HHVq36uiqNY6gcRloIacn8tz~CFywwzE3YUoEhd0Tz5Y3Lqr9zaSlkiQRwq9ZQyRRZEAtcTuCgEqha633WwPPBayx5XmLdM2qWFCTO4ODKD8iMrycGf5d1K5wMosqbl5TciWi81NcigySgc9g0ALtIi0pdAN25rezZipc7Kq~m6VFjf-KKt9UWRf9Z8tBo3KAGUkqeB6XX2bpm8~yiv~uehnmzbGlAnxyPnLYsvdS9Yw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                 }
                 alt="cohorts"
-                className="w-[21rem] h-[19.125rem] rounded-xl"
+                className="md:w-[21rem] md:h-[19.125rem] rounded-xl"
               />
             </div>
-            <div className="text-[#F2F2F2] w-[45%] flex flex-col gap-4 text-right ml-auto">
+            <div className="text-[#F2F2F2] md:w-[45%] flex flex-col gap-4 text-right ml-auto">
               <div>
                 <img src={Eye} alt="eye" className="w-8 h-8 ml-auto" />
               </div>
@@ -138,14 +138,14 @@ const App = () => {
             </div>
           </section>
           {/* section-3 */}
-          <section className="mt-[1.375rem] px-[3.75rem]">
+          <section className="mt-[1.375rem] sm:px-[3.75rem] px-5">
             <p className="text-[#f2f2f2] text-right text-2xl font-medium">
               Testimonials
             </p>
             <div className="h-[1px] bg-gray-50 mt-5 opacity-50"></div>
           </section>
           {/* section-4  */}
-          <section className="mt-10 pl-[3.75rem] flex gap-10 items-end">
+          <section className="mt-10 sm:pl-[3.75rem] pl-5 flex gap-10 items-end">
             <div className="shrink-0">
               <img src={Square} alt="" />
             </div>
