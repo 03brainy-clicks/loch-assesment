@@ -7,13 +7,12 @@ import Eye from "./assets/Eye.svg";
 import Clock from "./assets/clock.svg";
 import Square from "./assets/square.svg";
 import Triangle from "./assets/triangle-down.svg";
-import { useState } from "react";
 import SignupForm from "./components/SignupForm";
 
 const App = () => {
   return (
-    <div className="w-screen h-screen flex bg-black ">
-      <main className="gradient w-[calc(100%-44.44%)] py-10 h-full  ">
+    <div className="w-screen h-screen flex bg-black overflow-hidden ">
+      <main className="gradient w-[calc(100%-44.44%)] py-10 h-screen overflow-y-scroll ">
         <div className="w-full">
           {/* section-1 */}
           <section className="flex gap-9  pl-[3.75rem] pr-0">
