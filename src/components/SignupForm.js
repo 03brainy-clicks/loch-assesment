@@ -23,9 +23,9 @@ const SignupForm = () => {
   };
 
   return (
-    <main className="xl:w-[44.44%] min-h-screen order-0 xl:order-1 p-7 py-16 md:p-0 w-full bg-white flex items-center justify-center">
+    <main className="xl:w-[44.44%] min-h-screen order-0 xl:order-1 p-7 lg:py-16 md:p-0 w-full bg-white flex items-center justify-center">
       <div className="w-full">
-        <div className="w-[21.25rem] mx-auto">
+        <div className="md:w-[21.25rem] w-full mx-auto">
           <motion.h1
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
