@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 
 const SignupForm = () => {
@@ -25,13 +26,21 @@ const SignupForm = () => {
     <main className="xl:w-[44.44%] min-h-screen order-0 xl:order-1 p-7 py-16 md:p-0 w-full bg-white flex items-center justify-center">
       <div className="w-full">
         <div className="w-[21.25rem] mx-auto">
-          <h1 className="text-[#B0B1B3] text-[2.5rem] font-medium leading-tight">
+          <motion.h1
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-[#B0B1B3] text-[2.5rem] font-medium leading-tight"
+          >
             Sign up for exclusive access.
-          </h1>
+          </motion.h1>
           <div className="mt-8">
             <form className="space-y-6">
               <div>
-                <input
+                <motion.input
+                  initial={{ opacity: 0, y: 100 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.2 }}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   type="text"
@@ -44,7 +53,11 @@ const SignupForm = () => {
                   </p>
                 )}
               </div>
-              <div>
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.4 }}
+              >
                 <button
                   type="submit"
                   onClick={handleSubmit}
@@ -52,14 +65,19 @@ const SignupForm = () => {
                 >
                   Get Started
                 </button>{" "}
-              </div>
+              </motion.div>
             </form>
           </div>
         </div>
         <div className="mt-6">
-          <div className="py-[1.125rem]  w-full rounded-lg text-center text-[#19191A] font-semibold ">
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.6 }}
+            className="py-[1.125rem]  w-full rounded-lg text-center text-[#19191A] font-semibold "
+          >
             You’ll receive an email with an invite link to join.
-          </div>
+          </motion.div>
         </div>
       </div>
     </main>

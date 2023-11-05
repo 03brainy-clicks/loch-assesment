@@ -65,12 +65,4 @@ body {
   border: 1px solid var(--grey-100, #e5e5e6);
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.04),
     0px 4px 10px 0px rgba(0, 0, 0, 0.04);
-}
 
-/* Cards container shadow  */
-.cards-container {
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.308) 27.6%, #0202020e 53.13%, rgba(0, 0, 0, 0.44) 81.77%, rgba(255, 255, 255, 0.00) 100%);
-  box-shadow: 
-    inset 0px 20px #000000, inset -3px 3px 5px #000000;
-  @apply rounded-lg;
-}
