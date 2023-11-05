@@ -12,6 +12,7 @@ import Triangle from "../assets/triangle-down.svg";
 // components
 import SignupForm from "../components/SignupForm";
 import Slider from "../components/Slider";
+import { motion } from "framer-motion";
 
 // animation
 import { AnimatePresence, motion } from "framer-motion";
@@ -98,6 +99,7 @@ const Home = () => {
                           className="outline-none w-[14px] h-[14px] rounded-[4.2px]"
                         />
                       </div>
+
                     </div>
                     <div className="flex flex-col gap-[14.6px] mt-auto">
                       <p className="font-medium text-[.7rem]">
@@ -153,6 +155,7 @@ const Home = () => {
                   </motion.div>
                 </div>
               </div>
+
             </section>
             {/* section-2  */}
             <section className="flex md:flex-row flex-col sm:px-[3.75rem] px-7 md:pt-[4.5rem] pt-9 gap-8 ">

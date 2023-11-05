@@ -2,22 +2,29 @@ import React, { useRef, useState } from "react";
 
 function Testimonials({ children }) {
   const containerRef = useRef(null);
-  const [isDown, setIsDown] = useState(false);
-  const [startX, setStartX] = useState(null);
-  const [scrollLeft, setScrollLeft] = useState(null);
+  const [state, setState] = useState({
+    isDown: false,
+    startX: null,
+    scrollLeft: null,
+  });
+
+  const { isDown, startX, scrollLeft } = state;
 
   const handleMouseDown = (e) => {
-    setIsDown(true);
-    setStartX(e.pageX - containerRef.current.offsetLeft);
-    setScrollLeft(containerRef.current.scrollLeft);
+    setState({
+      ...state,
+      isDown: true,
+      startX: e.pageX - containerRef.current.offsetLeft,
+      scrollLeft: containerRef.current.scrollLeft,
+    });
   };
 
   const handleMouseLeave = () => {
-    setIsDown(false);
+    setState({ ...state, isDown: false });
   };
 
   const handleMouseUp = () => {
-    setIsDown(false);
+    setState({ ...state, isDown: false });
   };
 
   const handleMouseMove = (e) => {
