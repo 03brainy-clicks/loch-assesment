@@ -27,8 +27,8 @@ const SignupForm = () => {
   };
 
   return (
-    <main className="xl:w-[44.44%] min-h-screen order-0 xl:order-1 p-7 lg:py-16 md:p-0 w-full bg-white flex items-center justify-center">
-      <div className="w-full md:w-[21.25rem] mx-auto">
+    <main className="xl:w-[44.44%] min-h-screen order-0 xl:order-1 p-9 sm:py-16 md:p-0 w-full bg-white flex items-center justify-center">
+      <div className="w-full sm:w-[21.25rem] mx-auto">
         <motion.h1 {...inputMotion} className="text-[#B0B1B3] text-[2.5rem] font-medium leading-tight">
           Sign up for exclusive access.
         </motion.h1>
