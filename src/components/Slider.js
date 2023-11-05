@@ -1,37 +1,30 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 
 function Testimonials({ children }) {
   const containerRef = useRef(null);
-  const [state, setState] = useState({
-    isDown: false,
-    startX: null,
-    scrollLeft: null,
-  });
-
-  const { isDown, startX, scrollLeft } = state;
+  let isDown = false;
+  let startX = null;
+  let scrollLeft = null;
 
   const handleMouseDown = (e) => {
-    setState({
-      ...state,
-      isDown: true,
-      startX: e.pageX - containerRef.current.offsetLeft,
-      scrollLeft: containerRef.current.scrollLeft,
-    });
+    isDown = true;
+    startX = e.pageX - containerRef.current.offsetLeft;
+    scrollLeft = containerRef.current.scrollLeft;
   };
 
   const handleMouseLeave = () => {
-    setState({ ...state, isDown: false });
+    isDown = false;
   };
 
   const handleMouseUp = () => {
-    setState({ ...state, isDown: false });
+    isDown = false;
   };
 
   const handleMouseMove = (e) => {
     if (!isDown) return;
     e.preventDefault();
     const x = e.pageX - containerRef.current.offsetLeft;
-    const walk = (x - startX) * 1; // Adjust the multiplier to control scroll speed
+    const walk = (x - startX) * 1;
     containerRef.current.scrollLeft = scrollLeft - walk;
   };
 
