@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Loch Assessment Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the repository for the Loch Assessment Application, a responsive web application built using React, Tailwind CSS, React Router DOM, Framer Motion, React Hooks, and designed in Figma, offering various functionalities.
 
-## Available Scripts
+## Demo
 
-In the project directory, you can run:
+You can access the live demo of the application [here](https://csk-loch.netlify.app/).
 
-### `npm start`
+## Repository
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Find the codebase for this application on [GitHub](https://github.com/03brainy-clicks/loch-assessment/).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Description
 
-### `npm test`
+The Loch Assessment Application is a responsive web application built using React, offering the following features:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+1. **Responsive Design:** The application is responsive and optimized for all browser screen sizes on both desktop and mobile devices.
+2. **React-based:** Built entirely using React to ensure smooth rendering and interactivity.
+3. **Draggable Testimonials:** Testimonials at the bottom of the page are movable; users can click and drag testimonials to navigate through them.
+4. **Infinite Carousel for Notifications:** The notification settings on the top of the page auto-rotate in an infinite carousel, providing seamless updates.
+5. **Interactive Textbox:** The textbox on the right is responsive on hover and click, ensuring an engaging user experience.
+6. **Email Validation:** The application checks if the provided email contains '@' and '.' to verify if it's a legitimate email. If not, it prompts the user to enter a valid email.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React
+- Tailwind CSS
+- React Router DOM
+- Framer Motion
+- React Hooks
+- Figma (for design)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Setup Instructions
 
-### `npm run eject`
+To run this application locally, follow these steps:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository from [https://github.com/03brainy-clicks/loch-assessment/](https://github.com/03brainy-clicks/loch-assessment/).
+2. Navigate to the project directory.
+3. Install dependencies using `npm install` or `yarn install`.
+4. [Add any specific setup or configuration steps here, if required].
+5. Run the application using `npm start` or `yarn start`.
+6. Access the application in your browser at `http://localhost:3000` (or as specified).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contribution
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Contributions to the project are welcome. If you wish to contribute, please follow these steps:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Fork the repository.
+2. Create a new branch for your feature (`git checkout -b feature/YourFeature`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add feature'`).
+5. Push to the branch (`git push origin feature/YourFeature`).
+6. Create a Pull Request.
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the [mention your license type, e.g., MIT] License - see the [LICENSE](LICENSE) file for details.
