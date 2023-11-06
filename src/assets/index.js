@@ -5,5 +5,6 @@ import Eye from "./Eye.svg";
 import Clock from "./clock.svg";
 import Square from "./square.svg";
 import Triangle from "./triangle-down.svg";
+import Cohorts from "./Cohorts.png";
 
-export {Bell,Bell2,Chart,Eye,Clock,Square,Triangle}
+export {Bell,Bell2,Chart,Eye,Clock,Square,Triangle,Cohorts}
