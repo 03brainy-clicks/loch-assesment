@@ -52,7 +52,7 @@ const Section1 = () => {
           on-chain or when a dormant whale you care about becomes active.
         </motion.p>
       </div>
-      <div className="lg:w-[54%] w-full">
+      <div className="lg:w-[54%] w-full relative">
         <NotificationCardsSection />
       </div>
     </section>
