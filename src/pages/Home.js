@@ -44,7 +44,7 @@ const Section1 = () => {
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={{ opacity: .7, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
           className="opacity-70 font-medium"
         >
@@ -94,7 +94,7 @@ const Section2 = () => {
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={{ opacity: .7, y: 0 }}
           transition={{ duration: 1, delay: 1.2 }}
           className="opacity-70 font-medium"
         >
