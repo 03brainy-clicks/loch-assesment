@@ -26,15 +26,15 @@ const NotificationCardsSection = () => {
 
   return (
     <>
-      <div>
-        <div className="absolute z-10 cards-overlay w-full h-[11.844rem] border-none  "></div>
+      <div className="relative rounde-l-lg  cards-overlay">
+        <div className="absolute z-10 cards-overlay w-full h-[11.844rem] border-none rounded-l-lg"></div>
         <Marquee
           speed={25}
           pauseOnHover={true}
-          className=" rounded-l-lg relative"
+          className=" rounded-l-lg relative cards-overlay "
           autoFill="true"
         >
-          <div className="lg:w-full lg:pl-4 flex justify-start gap-4 overflow-x-auto rounded-l-lg cards-container">
+          <div className="pl-4 cards-container flex gap-4">
             {/* card-1  */}
             <motion.div
               initial={{ opacity: 0, x: 100 }}

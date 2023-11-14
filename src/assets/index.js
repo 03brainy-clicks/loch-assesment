@@ -5,7 +5,7 @@ import Eye from "./Eye.svg";
 import Clock from "./clock.svg";
 import Square from "./square.svg";
 import Triangle from "./triangle-down.svg";
-import Cohorts from "./Cohorts.png";
+import Cohorts from "./cohorts.png";
 import Filter from "./filter.png";
 
 export { Bell, Bell2, Chart, Eye, Clock, Square, Triangle, Cohorts, Filter };

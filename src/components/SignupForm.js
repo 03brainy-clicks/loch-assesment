@@ -42,7 +42,7 @@ const SignupForm = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 type="text"
-                className="py-5 px-6 outline-gray-300 input-shadow font-medium w-full rounded-lg border border-gray-100 text-gray-900 placeholder:text-[#CACBCC]"
+                className="py-5 px-6 outline-gray-300 input-shadow hover:border-gray-300 transition-all duration-300 font-medium w-full rounded-lg border border-gray-100 text-gray-900 placeholder:text-[#CACBCC] "
                 placeholder="Your email address"
               />
               {error && (
