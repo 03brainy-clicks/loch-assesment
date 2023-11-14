@@ -24,9 +24,11 @@ const NotificationCardsSection = () => {
     };
   }, [save]);
 
+  // Todo implement filter feature
+
   return (
     <>
-      <div className="relative rounde-l-lg  cards-overlay">
+      <div className="relative rounde-l-lg  cards-overlay rounded-l-lg">
         <div className="absolute z-10 cards-overlay w-full h-[11.844rem] border-none rounded-l-lg"></div>
         <Marquee
           speed={25}
