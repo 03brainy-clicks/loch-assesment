@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
 import React from "react";
-import Slider from "./Slider";
+import Slider from "../../utils/Slider";
 
 const TestimonialsSection = () => {
   return (
     <Slider>
-      {/* Testimonial-1  */}
       <motion.div
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
@@ -23,7 +22,6 @@ const TestimonialsSection = () => {
           one unified app.”
         </p>
       </motion.div>
-      {/* testimonial-2  */}
       <motion.div
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
@@ -41,7 +39,6 @@ const TestimonialsSection = () => {
           trends markets without it. I'm addicted!”
         </p>
       </motion.div>
-      {/* testimonial-3  */}
       <motion.div
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}

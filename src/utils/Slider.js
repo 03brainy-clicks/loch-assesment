@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-function Testimonials({ children }) {
+function Slider({ children }) {
   const containerRef = useRef(null);
   let isDown = false;
   let startX = null;
@@ -47,4 +47,4 @@ function Testimonials({ children }) {
   );
 }
 
-export default Testimonials;
+export default Slider;
