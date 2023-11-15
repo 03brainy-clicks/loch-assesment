@@ -24,25 +24,23 @@ const NotificationCardsSection = () => {
     };
   }, [save]);
 
-  // Todo implement filter feature
-
   return (
     <>
-      <div className="relative rounde-l-lg  cards-overlay rounded-l-lg">
-        <div className="absolute z-10 cards-overlay w-full h-[11.844rem] border-none rounded-l-lg"></div>
+      <div className="relative rounded-l-lg">
         <Marquee
           speed={25}
           pauseOnHover={true}
-          className=" rounded-l-lg relative cards-overlay "
+          className="rounded-l-lg relative cards-overlay "
           autoFill="true"
         >
-          <div className="pl-4 cards-container flex gap-4">
+          <div className=" lg:pl-4 cards-container flex gap-4">
             {/* card-1  */}
             <motion.div
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.0 }}
-              className="w-48  bg-white shrink-0 p-4 flex flex-col gap-4 card-1"
+              className="w-48 bg-white shrink-0 p-4 flex flex-col gap-4 card-1"
+              style={{ zIndex: 2 }} // Adjust the z-index
             >
               <div className="flex justify-between">
                 <img src={Bell2} alt="bell" className="w-7 h-7" />
@@ -74,6 +72,7 @@ const NotificationCardsSection = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
               className="w-48 bg-white shrink-0 p-4 flex flex-col  card"
+              style={{ zIndex: 2 }} // Adjust the z-index
             >
               <div className="flex justify-between">
                 <img src={Chart} alt="bell" className="w-7 h-7" />
@@ -106,7 +105,8 @@ const NotificationCardsSection = () => {
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
-              className="w-48  bg-white shrink-0 rounded-lg p-4 flex flex-col gap-2 card mr-4 lg:mr-0"
+              className="w-48 bg-white shrink-0 rounded-lg p-4 flex flex-col gap-2 card mr-4 lg:mr-0"
+              style={{ zIndex: 2 }} // Adjust the z-index
             >
               <div className="flex justify-between">
                 <img src={Clock} alt="bell" className="w-7 h-7" />
