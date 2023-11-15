@@ -7,6 +7,7 @@ import Marquee from "react-fast-marquee";
 
 const NotificationCardsSection = () => {
   const [save, setSave] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   const handleSave = () => {
     setSave(true);
@@ -26,21 +27,22 @@ const NotificationCardsSection = () => {
 
   return (
     <>
-      <div className="relative rounded-l-lg">
+      <div className={`relative rounded-l-lg ${isHovered ? "" : "cards-overlay"} transition-all duration-300`}
+           onMouseEnter={() => setIsHovered(true)}
+           onMouseLeave={() => setIsHovered(false)}>
         <Marquee
           speed={25}
           pauseOnHover={true}
-          className="rounded-l-lg relative cards-overlay "
+          className="rounded-l-lg relative"
           autoFill="true"
         >
-          <div className=" lg:pl-4 cards-container flex gap-4">
+          <div className="lg:pl-4 cards-container flex gap-4">
             {/* card-1  */}
             <motion.div
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.0 }}
               className="w-48 bg-white shrink-0 p-4 flex flex-col gap-4 card-1"
-              style={{ zIndex: 2 }} // Adjust the z-index
             >
               <div className="flex justify-between">
                 <img src={Bell2} alt="bell" className="w-7 h-7" />
@@ -72,7 +74,6 @@ const NotificationCardsSection = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
               className="w-48 bg-white shrink-0 p-4 flex flex-col  card"
-              style={{ zIndex: 2 }} // Adjust the z-index
             >
               <div className="flex justify-between">
                 <img src={Chart} alt="bell" className="w-7 h-7" />
@@ -80,7 +81,7 @@ const NotificationCardsSection = () => {
                   <input
                     type="checkbox"
                     name="chart"
-                    className="outline-none w-[14px] h-[14px] rounded-[4.2px]"
+                    className="outline-none w-[14px] h-[14px] rounded-[4.2px] cursor-pointer"
                   />
                 </div>
               </div>
@@ -106,7 +107,6 @@ const NotificationCardsSection = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
               className="w-48 bg-white shrink-0 rounded-lg p-4 flex flex-col gap-2 card mr-4 lg:mr-0"
-              style={{ zIndex: 2 }} // Adjust the z-index
             >
               <div className="flex justify-between">
                 <img src={Clock} alt="bell" className="w-7 h-7" />
@@ -114,7 +114,7 @@ const NotificationCardsSection = () => {
                   <input
                     type="checkbox"
                     name="clock"
-                    className="outline-none w-[14px] h-[14px] rounded-[4.2px]"
+                    className="outline-none w-[14px] h-[14px] rounded-[4.2px] cursor-pointer"
                   />
                 </div>
               </div>
