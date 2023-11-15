@@ -29,7 +29,8 @@ const NotificationCardsSection = () => {
     <>
       <div className={`relative rounded-l-lg ${isHovered ? "" : "cards-overlay"} transition-all duration-300`}
            onMouseEnter={() => setIsHovered(true)}
-           onMouseLeave={() => setIsHovered(false)}>
+           onMouseLeave={() => setIsHovered(false)}
+          >
         <Marquee
           speed={25}
           pauseOnHover={true}
