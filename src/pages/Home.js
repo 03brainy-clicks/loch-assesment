@@ -10,7 +10,7 @@ import NotificationCardsSection from "../components/NotificationCardsSection";
 const Home = () => {
   return (
     <div className="w-screen md:h-screen min-h-screen flex xl:flex-row flex-col bg-black xl:overflow-hidden">
-      <main className="order-1 gradient xl:w-[calc(100%-44.44%)] 2xl:flex bg-black 2xl:items-center my-auto w-full sm:py-10 py-9 lg:h-screen min-h-screen overflow-y-scroll overflow-x-hidden">
+      <main className="order-1 gradient xl:w-[calc(100%-44.44%)] 2xl:flex bg-black 2xl:items-center my-auto w-full sm:py-14 py-9 lg:h-screen min-h-screen overflow-y-scroll overflow-x-hidden ">
         <div className="w-full z-10">
           <Section1 />
           <Section2 />
@@ -26,7 +26,7 @@ const Home = () => {
 const Section1 = () => {
   return (
     <section className="flex lg:flex-row flex-col lg:gap-15 gap-9 sm:pl-[3.75rem] pl-9 lg:pr-0">
-      <div className="text-[#F2F2F2] lg:w-[50%] flex flex-col gap-4 lg:pr-0 sm:pr-[3.75rem] pr-5 ">
+      <div className="text-[#F2F2F2] lg:w-[50%] flex flex-col gap-4 lg:pr-0 sm:pr-[3.75rem] pr-5   ">
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
