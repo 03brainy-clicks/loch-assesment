@@ -3,11 +3,14 @@ import React from "react";
 import Slider from "../../utils/Slider";
 
 const TestimonialsSection = () => {
+  const cardVariants = {
+    initial: { opacity: 0, x: 100 },
+    animate: { opacity: 1, x: 0 },
+  };
   return (
     <Slider>
       <motion.div
-        initial={{ opacity: 0, x: 100 }}
-        animate={{ opacity: 1, x: 0 }}
+        {...cardVariants}
         transition={{ duration: 1, delay: 1.6 }}
         className="p-5 mr-5 w-[22rem] shrink-0 flex flex-col gap-5 bg-white rounded-xl testimonials"
       >
@@ -23,8 +26,7 @@ const TestimonialsSection = () => {
         </p>
       </motion.div>
       <motion.div
-        initial={{ opacity: 0, x: 100 }}
-        animate={{ opacity: 1, x: 0 }}
+        {...cardVariants}
         transition={{ duration: 1, delay: 1.8 }}
         className="p-5  mr-5 w-[22rem] shrink-0 flex flex-col gap-5 bg-white rounded-xl testimonials"
       >
@@ -40,8 +42,7 @@ const TestimonialsSection = () => {
         </p>
       </motion.div>
       <motion.div
-        initial={{ opacity: 0, x: 100 }}
-        animate={{ opacity: 1, x: 0 }}
+        {...cardVariants}
         transition={{ duration: 1, delay: 2 }}
         className="p-5 w-[33.125rem] shrink-0 flex flex-col gap-5 mr-5 bg-white rounded-xl testimonials"
       >

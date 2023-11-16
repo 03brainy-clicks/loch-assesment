@@ -1,18 +1,22 @@
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 
-// icons
+// Icons
 import { Bell2, Chart, Clock, Triangle } from "../../assets";
 import Marquee from "react-fast-marquee";
 
 const NotificationCardsSection = () => {
+  // State to manage the save button state
   const [save, setSave] = useState(false);
+  // State to track hover state for animation
   const [isHovered, setIsHovered] = useState(false);
 
+  // Function to handle save button click
   const handleSave = () => {
     setSave(true);
   };
 
+  // Effect to reset save state after 2 seconds
   useEffect(() => {
     let timeoutId;
     if (save) {
@@ -24,6 +28,11 @@ const NotificationCardsSection = () => {
       clearTimeout(timeoutId);
     };
   }, [save]);
+
+  const cardVariants = {
+    initial: { opacity: 0, x: 100 },
+    animate: { opacity: 1, x: 0 },
+  };
 
   return (
     <>
@@ -41,10 +50,8 @@ const NotificationCardsSection = () => {
           autoFill="true"
         >
           <div className="lg:pl-4 cards-container flex gap-4">
-            {/* card-1  */}
             <motion.div
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
+              {...cardVariants}
               transition={{ duration: 1, delay: 0.0 }}
               className="w-48 bg-white shrink-0 p-4 flex flex-col gap-4 card-1"
             >
@@ -72,10 +79,8 @@ const NotificationCardsSection = () => {
                 </form>
               </div>
             </motion.div>
-            {/* card-2  */}
             <motion.div
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
+              {...cardVariants}
               transition={{ duration: 1, delay: 0.2 }}
               className="w-48 bg-white shrink-0 p-4 flex flex-col  card"
             >
@@ -105,10 +110,8 @@ const NotificationCardsSection = () => {
                 </div>
               </div>
             </motion.div>
-            {/* card-3  */}
             <motion.div
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
+              {...cardVariants}
               transition={{ duration: 1, delay: 0.4 }}
               className="w-48 bg-white shrink-0 rounded-lg p-4 flex flex-col gap-2 card mr-4 lg:mr-0"
             >

@@ -1,25 +1,31 @@
 import React, { useRef } from "react";
 
 function Slider({ children }) {
+  // Reference to the main container div
   const containerRef = useRef(null);
+
+  // Variables to track mouse events
   let isDown = false;
   let startX = null;
   let scrollLeft = null;
 
+  // Mouse down event handler
   const handleMouseDown = (e) => {
     isDown = true;
     startX = e.pageX - containerRef.current.offsetLeft;
     scrollLeft = containerRef.current.scrollLeft;
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseup", handleMouseUp);
   };
 
-  const handleMouseLeave = () => {
-    isDown = false;
-  };
-
+  // Mouse up event handler
   const handleMouseUp = () => {
     isDown = false;
+    document.removeEventListener("mousemove", handleMouseMove);
+    document.removeEventListener("mouseup", handleMouseUp);
   };
 
+  // Mouse move event handler
   const handleMouseMove = (e) => {
     if (!isDown) return;
     e.preventDefault();
@@ -32,9 +38,6 @@ function Slider({ children }) {
     <div
       className="w-full flex gap-5 overflow-hidden rounded-l-xl"
       onMouseDown={handleMouseDown}
-      onMouseLeave={handleMouseLeave}
-      onMouseUp={handleMouseUp}
-      onMouseMove={handleMouseMove}
       ref={containerRef}
       style={{ overflowX: "auto" }}
     >

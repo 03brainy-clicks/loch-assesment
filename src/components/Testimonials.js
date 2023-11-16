@@ -17,7 +17,6 @@ const Testimonials = () => {
         </p>
         <div className="h-[1px] bg-gray-50 mt-5 opacity-50"></div>
       </motion.section>
-
       <section className="mt-10 sm:pl-[3.75rem] pl-9 flex md:flex-row flex-col gap-10 md:items-end">
         <motion.div
           initial={{ opacity: 0, scale: 0 }}

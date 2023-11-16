@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Home.css";
 
-// components
+// Components
 import SignupForm from "../components/SignupForm";
 import Notification from "../components/Notification";
 import Whales from "../components/Whales";

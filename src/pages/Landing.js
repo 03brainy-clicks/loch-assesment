@@ -17,30 +17,26 @@ const Landing = () => {
   return (
     <div className="w-screen h-screen bg-white flex items-center justify-center">
       <motion.div
-        initial={containerVariants.initial}
-        animate={containerVariants.animate}
+        {...containerVariants}
         transition={{ duration: 1, delay: 0.0 }}
         className="h-20 w-20 rounded-full bg-black flex items-center justify-center p-9"
       >
         <div className="flex flex-col items-center gap-5">
           <motion.div
-            initial={contentVariants.initial}
-            whileInView={contentVariants.whileInView}
+            {...contentVariants}
             transition={{ duration: 1, delay: 1 }}
           >
             <img src={Square} alt="Square Logo" />
           </motion.div>
           <motion.h2
-            initial={contentVariants.initial}
-            whileInView={contentVariants.whileInView}
+            {...contentVariants}
             transition={{ duration: 1, delay: 1.2 }}
             className="text-3xl text-white font-medium"
           >
             Loch Assessment
           </motion.h2>
           <motion.div
-            initial={contentVariants.initial}
-            whileInView={contentVariants.whileInView}
+            {...contentVariants}
             transition={{ duration: 1, delay: 1.4 }}
             className="div w-full flex md:flex-row gap-3 flex-col"
           >
